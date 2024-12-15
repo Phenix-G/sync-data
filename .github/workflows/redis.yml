@@ -29,9 +29,19 @@ jobs:
     - name: Run Main File
       run: python3 main.py
       env:
-        BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
-        CHAT_ID: ${{ secrets.CHAT_ID }} 
+        SOURCE_REDIS_HOST: ${{ secrets.SOURCE_REDIS_HOST }}
+        SOURCE_REDIS_PORT: ${{ secrets.SOURCE_REDIS_PORT }} 
+        SOURCE_REDIS_USERNAME: ${{ secrets.SOURCE_REDIS_USERNAME }} 
+        SOURCE_REDIS_PASSWORD: ${{ secrets.SOURCE_REDIS_PASSWORD }} 
+        SOURCE_REDIS_SSL: ${{ secrets.SOURCE_REDIS_SSL }} 
+        SOURCE_REDIS_PROTOCOL: ${{ secrets.SOURCE_REDIS_PROTOCOL }} 
 
+        DEST_REDIS_HOST: ${{ secrets.DEST_REDIS_HOST }} 
+        DEST_REDIS_PORT: ${{ secrets.DEST_REDIS_PORT }} 
+        DEST_REDIS_USERNAME: ${{ secrets.DEST_REDIS_USERNAME }} 
+        DEST_REDIS_PASSWORD: ${{ secrets.DEST_REDIS_PASSWORD }} 
+        DEST_REDIS_SSL: ${{ secrets.DEST_REDIS_SSL }} 
+        DEST_REDIS_PROTOCOL: ${{ secrets.DEST_REDIS_PROTOCOL }} 
 
     - name: Delete old workflow runs
       uses: MajorScruffy/delete-old-workflow-runs@v0.3.0

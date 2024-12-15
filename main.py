@@ -17,6 +17,9 @@ def sync_data():
     source_config = Config.get_source_redis_config()
     dest_config = Config.get_dest_redis_config()
     sync_config = Config.get_sync_config()
+    print(source_config)
+    print(dest_config)
+    
 
     # Connect to Redis
     source = RedisClient.create_client(source_config)
