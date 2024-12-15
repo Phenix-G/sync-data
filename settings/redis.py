@@ -24,7 +24,6 @@ SOURCE_REDIS = {
     "password": os.getenv("SOURCE_REDIS_PASSWORD"),
     "ssl": str_to_bool(os.getenv("SOURCE_REDIS_SSL", "true")),
     "protocol": os.getenv("SOURCE_REDIS_PROTOCOL", 3),
-    "decode_responses": True,
 }
 
 # Destination Redis Configuration
@@ -35,7 +34,6 @@ DEST_REDIS = {
     "password": os.getenv("DEST_REDIS_PASSWORD"),
     "ssl": str_to_bool(os.getenv("DEST_REDIS_SSL", "true")),
     "protocol": os.getenv("DEST_REDIS_PROTOCOL", 3),
-    "decode_responses": True,
 }
 
 

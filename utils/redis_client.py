@@ -16,8 +16,7 @@ class RedisClient:
                 password=config["password"],
                 db=config.get("db", 0),
                 ssl=config.get("ssl", False),
-                ssl_cert_reqs=config.get("ssl_cert_reqs"),
-                decode_responses=True,
+                decode_responses=True, 
             )
             client.ping()
             return client
